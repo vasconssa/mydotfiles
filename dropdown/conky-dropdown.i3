@@ -1,4 +1,4 @@
-exec --no-startup-id $DOTFILES/conky/start_conky.sh
+exec --no-startup-id $HOME/.dotfiles/conky/start_conky.sh
 for_window [instance="conky-quickview"] floating enable
 for_window [instance="conky-quickview"] resize set 880 530
 for_window [instance="conky-quickview"] move scratchpad

@@ -5,7 +5,7 @@ plugins=(
     zsh-syntax-highlighting
     zsh-completions
 )
-export PATH=$PATH:$DOTFILES/scripts
+export PATH=$PATH:$HOME/.dotfiles/scripts
 export ZSH=$HOME/.oh-my-zsh
 export EDITOR="st -e nvim"
 source $ZSH/oh-my-zsh.sh

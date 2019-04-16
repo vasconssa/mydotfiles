@@ -2,7 +2,7 @@
 bindsym	$mod+Return		    exec $term
 bindsym $mod+Shift+e 		exec prompt "Exit i3" "i3-msg exit"
 bindsym Mod1+q			    [con_id="__focused__" instance="^(?!dropdown|pythonshell|conky-quickview|rangerdropdown).*$"] kill
-bindsym $mod+Shift+r		exec $DOTFILES/i3/reload.sh
+bindsym $mod+Shift+r		exec $HOME/.dotfiles/i3/reload.sh
 bindsym $mod+d			    exec rofi -show drun -padding 80 -bw 0 -lines 8 -width 100% -location 1 -show-icons 
 bindsym $mod+Shift+x		exec i3lock-fancy -n -p
 bindsym $mod+m			    move workspace to output left

@@ -7,6 +7,6 @@ export PROJECTS=~/Code
 if [[ ! $DISPLAY && $XDG_VNTR -eq 1 ]]; then
 	exec startx
 fi
-source $DOTFILES/zsh/sourcing.zsh
+source $HOME/.dotfiles/zsh/sourcing.zsh
 
 neofetch

@@ -29,7 +29,7 @@ modules-right = xkeyboard wlan date
 type = custom/script
 exec = echo "%{T3}%{T-}%{T3}%{T-}"
 interval = 1
-click-left = exec $DOTFILES/rofi/menus/power_menu
+click-left = exec $HOME/.dotfiles/rofi/menus/power_menu
 format-background = ${colors.dark-red}
 format-foreground = ${colors.background}
 

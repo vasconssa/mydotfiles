@@ -1,1 +1,1 @@
-bindsym $mod+Shift+i	exec $DOTFILES/icon_searcher/icon_searcher.sh
+bindsym $mod+Shift+i	exec $HOME/.dotfiles/icon_searcher/icon_searcher.sh

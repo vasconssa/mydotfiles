@@ -50,12 +50,8 @@ function _install() {
 }
 
 function _symlink() {
-  dirs=$(find . -maxdepth 1 -mindepth 1 -type d -not -name '.git' -print)
-
-  for dir in $dirs; do
-    echo "Installing ${dir}..."
-    cd "$dir" || exit
-    ./install.sh
-    cd ..
+  for filename in $(echo $HOME/.dotfiles/**/install.sh | tr " " "\n")
+  do
+      source $filename
   done
 }

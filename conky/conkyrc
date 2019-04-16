@@ -11,7 +11,7 @@ conky.config = {
     imlib_cache_size = 0,
     -- -- Window specifications -- #
     own_window = true,
-    own_window_colour = "#282a36",
+    own_window_colour = "#1E1D40",
     own_window_class = "conky-quickview",
     own_window_type = "normal",
     own_window_argb_value = 230,
@@ -35,20 +35,20 @@ conky.config = {
     xftalpha = 0.8,
 
     uppercase = false,
-    default_color = "#f8f8f2",
+    default_color = "#c7c7c7",
     --own_window_transparent yes
     minimum_width = 0,
     minimum_height = 0,
-    color0 = "#282a36",
-    color1 = "#FF5555",
-    color2 = "#50FA7B",
-    color3 = "#F1FA8C",
-    color4 = "#BD93F9",
-    color5 = "#FF79C6",
-    color6 = "#8BE9FD",
-    color7 = "#BFBFBF",
-    color8 = "#4D4D4D",
-    color9 = "#FF6E67"
+    color0 = "#1E1D40",
+    color1 = "#D90429",
+    color2 = "#3ad900",
+    color3 = "#FAD000",
+    color4 = "#6943ff",
+    color5 = "#ff2c70",
+    color6 = "#80fcff",
+    color7 = "#c7c7c7",
+    color8 = "#808080",
+    color9 = "#ff0000"
 }conky.text =
     [[
     ${goto 260}${goto 340}${font FuraCode Nerd Font:size=30} ${uptime_short}${goto 560}  ${time %H:%M}${font}

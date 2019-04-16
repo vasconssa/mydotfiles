@@ -1,2 +1,2 @@
 sleep 5
-conky -c $DOTFILES/conky/conkyrc
+conky -c $HOME/.dotfiles/conky/conkyrc

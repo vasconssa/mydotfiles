@@ -1,5 +1,5 @@
 #!/bin/sh
-export PATH=$PATH:$DOTFILES/scripts
+export PATH=$PATH:$HOME/.dotfiles/scripts
 selected=$(echo "Shutdown
 Reboot
 Log Out

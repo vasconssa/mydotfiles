@@ -1,1 +1,1 @@
-bindsym $mod+Shift+t	exec $DOTFILES/themes/selector.sh
+bindsym $mod+Shift+t	exec $HOME/.dotfiles/themes/selector.sh

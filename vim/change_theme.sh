@@ -15,6 +15,6 @@ then
     airline_theme="let g:airline_theme='gruvbox'"
 fi
 
-sed -i "/colorscheme/c\\$theme" $DOTFILES/vim/init.vim.symlink
-sed -i "/set background/c\\$background" $DOTFILES/vim/init.vim.symlink
-sed -i "/let g:airline_theme/c\\$airline_theme" $DOTFILES/vim/init.vim.symlink
+sed -i "/colorscheme/c\\$theme" $HOME/.dotfiles/vim/init.vim.symlink
+sed -i "/set background/c\\$background" $HOME/.dotfiles/vim/init.vim.symlink
+sed -i "/let g:airline_theme/c\\$airline_theme" $HOME/.dotfiles/vim/init.vim.symlink

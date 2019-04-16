@@ -4,7 +4,7 @@ then
 fi
 
 typeset -U config_files
-config_files=($DOTFILES/**/*.zsh)
+config_files=($HOME/.dotfiles/**/*.zsh)
 
 # load pyth files
 for file in ${(M)config_files:#*/path.zsh}
@@ -18,8 +18,8 @@ do
 	source $file
 done
 
-source $DOTFILES/python/py.zsh
+source $HOME/.dotfiles/python/py.zsh
 
-# source $DOTFILES/python/py.zsh
+# source $HOME/.dotfiles/python/py.zsh
 unset config_files
 

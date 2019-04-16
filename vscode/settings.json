@@ -8,7 +8,7 @@
     "editor.minimap.maxColumn": 60,
     "editor.minimap.renderCharacters": false,
     "explorer.openEditors.visible": 0,
-    "files.autoSave": "onWindowChange",
+    "files.autoSave": "afterDelay",
     "files.exclude": {
         "**/.git": true,
         "**/.svn": true,
