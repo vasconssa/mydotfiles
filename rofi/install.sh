@@ -1,15 +1,5 @@
-#!/bin/bash
-
-# shellcheck source=distro.sh
-. ../distro.sh
-# shellcheck source=helpers.sh
-. ../helpers.sh
-
-echo_info "Installing rofi..."
-_install rofi
-
-echo_info "Symlink rofi config"
-mkdir -p ~/.config/rofi
-ln -sfT ~/.dotfiles/rofi/config ~/.config/rofi/config
-
-echo_done "Rofi configuration!"
+# Install rofi
+yay --noconfirm -S rofi
+mkdir $HOME/.config/rofi
+# symlink
+echo "rofi.theme: $HOME/.cache/wal/colors.rofi" > $HOME/.config/rofi/config

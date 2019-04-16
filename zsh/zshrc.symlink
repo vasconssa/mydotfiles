@@ -1,0 +1,12 @@
+# ~/.zshrc
+
+export DOTFILES=~/.dotfiles
+
+export PROJECTS=~/Code
+
+if [[ ! $DISPLAY && $XDG_VNTR -eq 1 ]]; then
+	exec startx
+fi
+source $DOTFILES/zsh/sourcing.zsh
+
+neofetch

@@ -40,7 +40,7 @@ function _install() {
   elif [[ $1 == "aur" ]]; then
     for aur in "${AUR[@]}"; do
       echo_info "Installing ${aur}..."
-      yaourt -Sy "$aur" --needed --noconfirm
+      yay -Sy "$aur" --needed --noconfirm
       echo_done "${aur} installed!"
     done
   else

@@ -1,0 +1,27 @@
+#!/bin/sh
+export PATH=$PATH:$DOTFILES/scripts
+selected=$(echo "Shutdown
+Reboot
+Log Out
+Lock
+Suspend" | rofi -dmenu  -location 1 -yoffset 0 -width 300 -xoffset 0)
+
+if [ "$selected" == "Shutdown" ]
+        then prompt 'Do you really want to shutdown the computer' 'systemctl shu'
+
+
+elif [ "$selected" == "Reboot" ]
+        then prompt 'Do you really want to reboot the computer' 'reboot'
+
+elif [ "$selected" == "Log Out" ]
+        then prompt 'Do you really want to exit i3?' 'i3-msg exit'
+
+elif [ "$selected" == "Lock" ]
+        then i3lock-fancy -n -p
+
+elif [ "$selected" == "Suspend" ]
+        then prompt 'Do you really want to suspend the computer' 'systemctl suspend'
+
+else
+        echo "nothing"
+fi

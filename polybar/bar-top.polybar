@@ -1,0 +1,160 @@
+[bar/top]
+monitor = ${env:MONITOR:}
+width = 100%
+height = 23
+offset-y = 0
+
+fixed-center = true
+
+font-0 = FuraCode Nerd Font Mono:style=medium:size=12;3
+font-1 = FuraCode Nerd Font Mono:style=italic:size=12;3
+font-2 = FuraCode Nerd Font Mono:style=medium:size=16;3
+
+border-size = 8
+border-color = ${colors.background}
+line-size = 0
+padding-left = 0
+padding-right = 0
+module-margin-left = 0
+module-margin-right = 0
+background = ${colors.background}
+foreground = ${colors.yellow}
+
+modules-left =  power-menu audio
+modules-center = music-info music-prev music-pause music-next 
+modules-right = xkeyboard wlan date
+
+#### Modules ####
+[module/power-menu]
+type = custom/script
+exec = echo "%{T3}%{T-}%{T3}%{T-}"
+interval = 1
+click-left = exec $DOTFILES/rofi/menus/power_menu
+format-background = ${colors.dark-red}
+format-foreground = ${colors.background}
+
+[module/music-info]
+type = custom/script
+exec = echo "$(playerctl metadata xesam:artist) | $(playerctl metadata xesam:title)"
+interval = 1
+format-prefix = "%{T3}%{T-}  "
+format-background = ${colors.dark-blue}
+format-foreground = ${colors.background}
+
+[module/music-prev]
+type = custom/script
+exec = echo " 玲"
+click-left = playerctl previous
+format-background = ${colors.dark-blue}
+format-foreground = ${colors.background}
+
+[module/music-pause]
+type = custom/script
+exec = echo " 懶"
+click-left = playerctl play-pause
+format-background = ${colors.dark-blue}
+format-foreground = ${colors.background}
+
+[module/music-next]
+type = custom/script
+exec = echo " 怜 %{T3}%{T-}"
+click-left = playerctl next
+format-background = ${colors.dark-blue}
+format-foreground = ${colors.background}
+
+[module/xkeyboard]
+type = internal/xkeyboard
+blacklist-0 = num lock
+
+format-prefix = "%{T3}%{T- }  "
+format-prefix-foreground = ${colors.background}
+format-prefix-background = ${colors.cyan}
+
+label-layout = "%layout% %{T3}%{T-}"
+label-layout-foreground = ${colors.background}
+label-layout-background = ${colors.cyan}
+
+label-indicator-padding = 2
+label-indicator-margin = 1
+label-indicator-background = ${colors.cyan}
+
+[module/wlan]
+type = internal/network
+interface = wlp2s0
+interval = 3.0
+
+format-connected = <ramp-signal> <label-connected>
+format-connected-underline = ${colors.dark-red}
+format-connected-background = ${colors.dark-magenta}
+label-connected-foreground = ${colors.background}
+label-connected = %essid% %{T3}%{T-}
+format-connected-prefix = "%{T3}%{T- }"
+format-connected-prefix-foreground = ${colors.background}
+
+format-disconnected =
+;format-disconnected =
+;format-disconnected-underline = ${colors.dark-red}
+;label-disconnected = %ifname% disconnected
+;label-disconnected-foreground = ${colors.foreground-alt}
+
+ramp-signal-0 = 睊
+ramp-signal-1 = 直
+ramp-signal-2 = 直
+ramp-signal-3 = 直
+ramp-signal-4 = 直
+ramp-signal-foreground = ${colors.background}
+
+[module/date]
+type = internal/date
+interval = 5
+
+date =
+date-alt = " %d-%m-%Y"
+
+time = %H:%M
+time-alt = %H:%M:%S
+
+format-prefix = %{T3}%{T- } 
+format-prefix-foreground = ${colors.background}
+format-prefix-background = ${colors.dark-yellow}
+label = %date% %time% %{T3}%{T-}
+label-background = ${colors.dark-yellow}
+label-foreground = ${colors.background}
+
+[module/audio]
+type = internal/pulseaudio
+
+sink = alsa_output.pci-0000_00_1b.0.analog-stereo
+
+format-volume = " <label-volume><bar-volume>"
+label-volume = "%{T3}%{T-} 墳 "
+format-background = ${colors.dark-green}
+format-foreground = ${colors.background}
+label-volume-background = ${colors.dark-green}
+label-volume-foreground = ${colors.background}
+format-volume-suffix = %{T3}%{T-}
+format-volume-suffix-background = ${colors.dark-green}
+format-volume-suffix-foreground = ${colors.background}
+;format-volume-foreground = #FFFFFF
+
+format-muted= "<label-muted>"
+label-muted = "%{T3}%{T-} 婢 %{T3}%{T-}"  
+label-muted-background = ${colors.dark-green}
+label-muted-foreground = ${colors.background}
+
+bar-volume-width = 10
+bar-volume-foreground = ${colors.background}
+bar-volume-background = ${colors.dark-green}
+bar-volume-gradient = false
+
+bar-volume-indicator = 
+bar-volume-indicator-foreground = ${colors.background-alt}
+bar-volume-indicator-background = ${colors.dark-green}
+
+bar-volume-fill = 
+bar-volume-fill-foreground = ${colors.background}
+bar-volume-fill-background = ${colors.dark-green}
+
+bar-volume-empty = 
+bar-volume-empty-foreground = ${colors.background}
+bar-volume-empty-background = ${colors.dark-green}

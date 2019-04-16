@@ -1,0 +1,204 @@
+" Inspired by fisadev
+
+let vim_plug_just_installed = 0
+let vim_plug_path = expand('~/.config/nvim/autoload/plug.vim')
+if !filereadable(vim_plug_path)
+    echo "Installing Vim-plug..."
+    echo ""
+    silent !mkdir -p ~/.config/nvim/autoload
+    silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    let vim_plug_just_installed = 1
+endif
+
+" manually load vim-plug the first time
+if vim_plug_just_installed
+    :execute 'source '.fnameescape(vim_plug_path)
+endif
+
+" Obscure hacks done, you can now modify the rest of the .vimrc as you wish :)
+
+" ============================================================================
+" Active plugins
+" You can disable or add new ones here:
+
+" this needs to be here, so vim-plug knows we are declaring the plugins we
+" want to use
+call plug#begin('~/.config/nvim/plugged')
+
+    " Install Theme
+    Plug 'morhetz/gruvbox'
+
+    " Install Status Line
+    Plug 'vim-airline/vim-airline'
+    Plug 'vim-airline/vim-airline-themes'
+    
+    " Install Nerd tree
+    Plug 'scrooloose/nerdtree'
+    Plug 'Xuyuanp/nerdtree-git-plugin'
+    
+    " Install Auto Completion
+    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+    " Completion from other opened files
+    Plug 'Shougo/context_filetype.vim'
+    " Python autocompletion
+    Plug 'zchee/deoplete-jedi', { 'do': ':UpdateRemotePlugins' }
+    " Just to add the python go-to-definition and similar features, autocompletion
+    " from this plugin is disabled
+    Plug 'davidhalter/jedi-vim'
+    
+    " Install black code formatter
+    Plug 'ambv/black'
+    
+    " Install Commenter
+    Plug 'scrooloose/nerdcommenter'
+
+    " Automatically close parenthesis, etc
+    Plug 'Townk/vim-autoclose'
+
+    " Vim Gutentags
+    Plug 'ludovicchabant/vim-gutentags'
+
+    " GitGutter
+    Plug 'airblade/vim-gitgutter'
+
+    " Tagbar
+    Plug 'majutsushi/tagbar'
+
+    " Dracula
+    Plug 'dracula/vim', { 'as': 'dracula' }
+
+    " Search results counter
+    Plug 'vim-scripts/IndexedSearch'
+
+    " Indent text object
+    Plug 'michaeljsmith/vim-indent-object'
+
+    " Paint css colors with the real color
+    Plug 'lilydjwg/colorizer'
+
+    " Automatically sort python imports
+    Plug 'fisadev/vim-isort'
+
+    " Highlight matching html tags
+    Plug 'valloric/MatchTagAlways'
+
+    " Generate html in a simple way
+    Plug 'mattn/emmet-vim'
+
+    " Git integration
+    Plug 'tpope/vim-fugitive'
+
+    " Git/mercurial/others diff icons on the side of the file lines
+    Plug 'mhinz/vim-signify'
+
+    " Linters
+    Plug 'neomake/neomake'
+
+    " PyWal
+    Plug 'dylanaraps/wal.vim'
+
+call plug#end()
+
+" ============================================================================
+" Install plugins the first time vim runs
+
+if vim_plug_just_installed
+    echo "Installing Bundles, please ignore key map error messages"
+    :PlugInstall
+endif
+
+" ============================================================================
+" Vim settings and mappings
+" You can edit them as you wish
+
+" set linenumber
+set nu relativenumber
+
+" change esc to jj
+" double esc to avoid autocomplete
+imap jj <Esc><Esc>
+
+" easier navigation
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+" when scrolling, keep cursor 3 lines away from screen border
+set scrolloff=3
+
+" configure tabs to 4 whitespaces
+set tabstop=4
+set shiftwidth=4
+set expandtab
+filetype indent on
+
+" remove ugly vertical lines on window division
+set fillchars+=vert:\ 
+
+" save as sudo
+ca w!! w !sudo tee "%"
+
+" set Colorscheme
+
+" clear search results
+nnoremap <esc> :noh<CR>
+
+" ============================================================================
+" Plugins settings and mappings
+" Edit them as you wish.
+
+" deoplete
+let g:deoplete#enable_at_startup = 1
+" comment this line to enable autocompletion preview window
+" (displays documentation related to the selected completion option)
+set completeopt-=preview
+let g:deoplete#enable_ignore_case = 1
+let g:deoplete#enable_smart_case = 1
+" complete with words from any opened file
+let g:context_filetype#same_filetypes = {}
+let g:context_filetype#same_filetypes._ = '_'
+
+
+" Jedi-vim ------------------------------
+
+" Disable autocompletion (using deoplete instead)
+let g:jedi#completions_enabled = 0
+
+" All these mappings work only for python code:
+" Go to definition
+let g:jedi#goto_command = ',d'
+" Find ocurrences
+let g:jedi#usages_command = ',o'
+" Find assignments
+let g:jedi#goto_assignments_command = ',a'
+" Go to definition in new tab
+nmap ,D :tab split<CR>:call jedi#goto()<CR>
+
+
+" black
+autocmd BufWritePre *.py execute ':Black'
+
+" airline
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+
+" nerd tree
+let NERDTreeShowHidden=1
+
+" background
+hi Normal guibg=NONE ctermbg=NONE
+
+" tagbar
+" toggle tagbar display
+map <F4> :TagbarToggle<CR>
+" autofocus on tagbar open
+let g:tagbar_autofocus = 1
+
+" nerdtree
+" toggle nerdtree display
+map <F3> :NERDTreeToggle<CR>
+" open nerdtree with the current file selected
+nmap ,t :NERDTreeFind<CR>
+" don;t show these file types
+let NERDTreeIgnore = ['\.pyc$', '\.pyo$']

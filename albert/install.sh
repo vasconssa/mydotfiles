@@ -6,7 +6,7 @@
 . ../helpers.sh
 
 echo_info "Installing albert..."
-sudo yaourt -Syu albert --needed --noconfirm
+sudo yay -Syu albert --needed --noconfirm
 
 echo_info "Symling albert.conf..."
 mkdir -p ~/.config/albert

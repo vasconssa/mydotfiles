@@ -1,8 +1,8 @@
 [user]
-  name = Nelson Estevão
-  email = nelsonmestevao@gmail.com
+  name = Peer Rheinboldt
+  email = peer.rheinboldt@gmail.com
 [github]
-  user = nelsonmestevao
+  user = peerlator
 [web]
   browser = google-chrome-stable
 [core]
@@ -80,11 +80,11 @@
   textconv = catppt
 [diff-so-fancy]
   first-run = false
-[url "git@github.com:nelsonmestevao/"]
+[url "git@github.com:peerlator/"]
   insteadOf = gh:
 [url "git@github.com:"]
   insteadOf = ghx:
-[url "git@gitlab.com:nelsonmestevao/"]
+[url "git@gitlab.com:peerlator/"]
   insteadOf = gl:
 [url "git@gitlab.com:"]
   insteadOf = glx:

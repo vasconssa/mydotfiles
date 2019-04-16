@@ -1,0 +1,11 @@
+# Keyboard Shortcuts
+- Mod+d -           Launch Application launcher "rofi"
+- Mod+p -           Launch floating "dropdown" shell running python repl
+- Mod+c -           Launch floating "dropdown" conky window, to overview system
+- Mod+t -           Launch floating "dropdown" terminal
+- Mod+Shift+f -     Launch floating "dropdown" ranger file browser
+- Mod+Return -      Launch Terminal
+- Mod+Shift+e -     Exit i3wm
+- Alt+q -           Exit the current selected program
+- Mod+Shift+r -     Reload i3
+- Mod+Shift

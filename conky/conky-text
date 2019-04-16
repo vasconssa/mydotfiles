@@ -1,0 +1,21 @@
+conky.text =
+    [[
+    ${goto 260}${goto 340}${font FuraCode Nerd Font:size=30} ${uptime_short}${goto 560}  ${time %H:%M}${font}
+    ${goto 260}${hr 2}
+    ${goto 15}${color3}${font FuraCode Nerd Font:size=14}${goto 40}${font FuraCode Nerd Font:Italic:size=13}WLAN${voffset -7}${goto 265}${font FuraCode Nerd Font:size=14}${goto 290}${font FuraCode Nerd Font:Italic:size=13}ETH${voffset -7}${color}${font FuraCode Nerd Font:size=14}${alignr}${distribution} ${kernel}
+    ${voffset 10}${goto 15}${font FuraCode Nerd Font:size=14}${goto 40}${font}Up Speed: ${upspeed wlp2s0}${goto 240}${upspeedgraph  wlp2s0 14,20 686868 686868}${voffset -7}${goto 265}${font FuraCode Nerd Font:size=14}${font}${goto 290}Up Speed: ${upspeed enp37s0}${goto 433}${upspeedgraph  enp37s0 14,80 686868 686868}${font}${color}
+    ${goto 15}${font FuraCode Nerd Font:size=14}${font}${goto 40}Down Speed: ${downspeed wlp2s0}${goto 240}${downspeedgraph wlp2s0 14,20 686868 686868}${voffset -7}${goto 265}${font FuraCode Nerd Font:size=14}${font}${goto 290}Down Speed: ${downspeed enp37s0}${goto 433}${downspeedgraph  enp37s0 14,80 686868 686868}
+    ${goto 15}${font FuraCode Nerd Font:size=14}${font}${goto 40}IP: ${addrs wlp2s0}${goto 265}${voffset -7}${font FuraCode Nerd Font:size=14}${goto 290}${font}IP: ${addrs enp37s0}${goto 530}${font FuraCode Nerd Font:size=14} ${font}Public IP: ${exec curl ipinfo.io/ip}
+    ${voffset 10}${goto 15}${color3}${font FuraCode Nerd Font:size=14}漣${goto 40}${font FuraCode Nerd Font:Italic:size=13}PROCESSES${voffset -7}${goto 370}${font FuraCode Nerd Font:size=14}${goto 400}${font FuraCode Nerd Font:Italic:size=13}DISCS${color}${font}
+    ${voffset 8}${font FuraCode Nerd Font:size=9}${goto 40}Name ${goto 245}CPU%${goto 300}MEM%${voffset -7}${goto 400}${font FuraCode Nerd Font:size=14}${font}${goto 425}${acpitemp} ºC
+    ${voffset 5}${goto 40}${top name 1} ${goto 225}${top cpu 1}${goto 280}${top mem 1}${goto 400}${voffset -7}${font FuraCode Nerd Font:size=14}${font}${goto 425}/:${goto 480}${fs_bar 7,80 /}${goto 570}${fs_used /} / ${fs_size /}
+    ${voffset 5}${goto 40}${top name 2} ${goto 225}${top cpu 2}${goto 280}${top mem 2}${voffset -7}${goto 400}${font FuraCode Nerd Font:size=14}易${font}${goto 425}Swap:${goto 480}${swapbar 7,80}${goto 570}${swap} / ${swapmax}
+    ${voffset 5}${goto 40}${top name 3} ${goto 225}${top cpu 3}${goto 280}${top mem 3}
+    ${voffset 2}${goto 40}${top name 4} ${goto 225}${top cpu 4}${goto 280}${top mem 4}${goto 400}Read: ${diskiograph_read 14,80 686868 686868}${goto 550}Write: ${diskiograph_write 14,80 686868 686868}
+    ${voffset 2}${goto 40}${top name 5} ${goto 225}${top cpu 5}${goto 280}${top mem 5}
+    ${voffset 2}${goto 40}${top name 6} ${goto 225}${top cpu 6}${goto 280}${top mem 6}${voffset -7}${goto 370}${color3}${font FuraCode Nerd Font:size=14}${goto 400}${font FuraCode Nerd Font:Italic:size=13}CPU${voffset -7}${goto 570}${font FuraCode Nerd Font:size=14}${font FuraCode Nerd Font:Italic:size=13}${goto 600}Memory${color}${font}
+    ${voffset 10}${goto 40}${top name 7} ${goto 225}${top cpu 7}${goto 280}${top mem 7}${goto 400}${cpubar cpu0 7,75}${goto 485}${cpubar cpu1 7,75}${goto 600}RAM:${goto 644}$memperc%${goto 680}${membar 7,80}
+    ${voffset 1}${goto 40}${top name 8} ${goto 225}${top cpu 8}${goto 280}${top mem 8}${goto 400}${cpubar cpu2 7,75}${goto 485}${cpubar cpu3 7,75}${goto 600}${memgraph 48,160 686868 686868}
+    ${voffset -45}${goto 40}${top name 9} ${goto 225}${top cpu 9}${goto 280}${top mem 9}${goto 400}${cpubar cpu4 7,75}${goto 485}${cpubar cpu5 7,75}
+    ${voffset 2}${goto 40}${top name 10} ${goto 225}${top cpu 10}${goto 280}${top mem 10}${goto 400}${cpubar cpu6 7,75}${goto 485}${cpubar cpu7 7,75}
+    ]]
