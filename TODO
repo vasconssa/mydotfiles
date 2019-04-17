@@ -3,3 +3,10 @@
 - Bluetooth
 - PulseAudio
 - Backup of Old config files
+- Remove unnecessary steps
+- fix python install
+- add uninstall script
+- change README
+- change Blogpost
+- Fix VSCode theme
+- feh

@@ -8,7 +8,7 @@
     "editor.minimap.maxColumn": 60,
     "editor.minimap.renderCharacters": false,
     "explorer.openEditors.visible": 0,
-    "files.autoSave": "afterDelay",
+    "files.autoSave": "onFocusChange",
     "files.exclude": {
         "**/.git": true,
         "**/.svn": true,
@@ -156,7 +156,6 @@
     "terminal.integrated.fontFamily": "FuraCode Nerd Font",
     "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-    "workbench.colorTheme": "vs-wal",
     "workbench.settings.useSplitJSON": true,
     "window.titleBarStyle": "custom"
 }
