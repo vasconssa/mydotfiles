@@ -19,26 +19,22 @@ function echo_info() {
 function _update() {
   if [[ $1 != "system" ]]; then
     echo_info "Updating system packages..."
-    sudo "$PKGMN" "$PKGU" "${PKGOPT[@]}"
+    "$PKGMN" "$PKGU" "${PKGOPT[@]}"
   else
     echo_info "Updating ${1}..."
-    sudo "$PKGMN" "$PKGI" "$1"
+    "$PKGMN" "$PKGI" "$1"
   fi
 }
 
 function _install() {
   for pkg in "${PKG[@]}"; do
     echo_info "Installing ${pkg}..."
-    if ! [ -x "$(command -v rainbow)" ]; then
-      sudo "$PKGMN" "$PKGI" "$pkg" "${PKGOPT[@]}"
-    else
-      rainbow --red=error --yellow=warning sudo "$PKGMN" "$PKGI" "$pkg" "${PKGOPT[@]}"
-    fi
+    "$PKGMN" "$PKGI" "$pkg" "${PKGOPT[@]}"
     echo_done "${pkg} installed!"
   done
 }
 
-function _symlink() {
+function _run_install_files() {
   for filename in $(echo $HOME/.dotfiles/**/install.sh | tr " " "\n")
   do
       source $filename

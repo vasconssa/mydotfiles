@@ -11,4 +11,4 @@ sudo chmod +x $HOME/.dotfiles/**/*.sh
 echo_info "Installing packages..."
 _install core
 
-_symlink
+_run_install_files

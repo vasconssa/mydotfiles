@@ -9,7 +9,7 @@
 - change README
 - change Blogpost
 - Fix VSCode theme
-- VSCode Extension saver
+- VSCode Extension saver with watchexec
 - theme from startup
 - xclip
 - st

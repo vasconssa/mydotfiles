@@ -23,21 +23,12 @@ export PKG=(
   xclip
   zathura-pdf-mupdf
   betterlockscreen
-  # copyq #
   franz
-  google-chrome
-  insect
-  # mailspring #
+  chromium 
   neovim
-  # pokemon-terminal-git #
   polybar
-  rainbow
-  sc-im
   screenkey
-  slack-desktop
   spotify
-  # trello #
   watchexec
-  z-dir-jump-git
 )
 
