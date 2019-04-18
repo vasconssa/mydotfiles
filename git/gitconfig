@@ -94,4 +94,4 @@
   process = git-lfs filter-process
   required = true
 [credential]
-	helper = cache
+	helper = store

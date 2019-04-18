@@ -1,48 +1,27 @@
 #!/bin/bash
 
 export PKG=(
-  # acpi #
-  # bat #
-  catdoc
-  ctags
-  # curl #
+  bat
+  curl
   diff-so-fancy
-  diffpdf
-  # dunst #
-  # exa #
+  dunst
   feh
-  # htop #
-  # hyperfine #
-  # libreoffice-still #
-  lighttpd
-  lolcat
-  # lxappearance #
-  # mupdf #
+  htop
+  libreoffice-still
+  lxappearance
   neofetch
-  numlockx
-  odt2txt
   playerctl
   pulseaudio
   pulseaudio-bluetooth
+  pulsemixer
   ranger
-  rclone
-  redshift
-  rofi
-  shfmt
-  # terminology #
-  # texstudio #
   tldr
   tree
+  ttf-liberation
   unzip
   wget
-  wmctrl
-  xcape
-  # xclip #
+  xclip
   zathura-pdf-mupdf
-  zeal
-)
-
-export AUR=(
   betterlockscreen
   # copyq #
   franz

@@ -18,7 +18,7 @@ padding-right = 0
 module-margin-left = 0
 module-margin-right = 0
 background = ${colors.background}
-foreground = ${colors.yellow}
+foreground = ${colors.background}
 
 modules-left =  power-menu audio
 modules-center = music-info music-prev music-pause music-next 

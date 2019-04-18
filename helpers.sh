@@ -27,26 +27,15 @@ function _update() {
 }
 
 function _install() {
-  if [[ $1 == "core" ]]; then
-    for pkg in "${PKG[@]}"; do
-      echo_info "Installing ${pkg}..."
-      if ! [ -x "$(command -v rainbow)" ]; then
-        sudo "$PKGMN" "$PKGI" "$pkg" "${PKGOPT[@]}"
-      else
-        rainbow --red=error --yellow=warning sudo "$PKGMN" "$PKGI" "$pkg" "${PKGOPT[@]}"
-      fi
-      echo_done "${pkg} installed!"
-    done
-  elif [[ $1 == "aur" ]]; then
-    for aur in "${AUR[@]}"; do
-      echo_info "Installing ${aur}..."
-      yay -Sy "$aur" --needed --noconfirm
-      echo_done "${aur} installed!"
-    done
-  else
-    echo_info "Intalling ${1}..."
-    sudo "PKGMN" "$PKGI" "$1"
-  fi
+  for pkg in "${PKG[@]}"; do
+    echo_info "Installing ${pkg}..."
+    if ! [ -x "$(command -v rainbow)" ]; then
+      sudo "$PKGMN" "$PKGI" "$pkg" "${PKGOPT[@]}"
+    else
+      rainbow --red=error --yellow=warning sudo "$PKGMN" "$PKGI" "$pkg" "${PKGOPT[@]}"
+    fi
+    echo_done "${pkg} installed!"
+  done
 }
 
 function _symlink() {

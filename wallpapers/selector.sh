@@ -3,3 +3,4 @@ selected=$(find $HOME/.dotfiles/wallpapers -type f \( -iname "*.png" -and ! -ina
 rm -f $HOME/.dotfiles/wallpapers/current.png
 cp $HOME/.dotfiles/wallpapers/$selected $HOME/.dotfiles/wallpapers/current.png
 feh --bg-scale $HOME/.dotfiles/wallpapers/current.png
+betterlockscreen -u $HOME/.dotfiles/wallpapers/current.png
