@@ -80,7 +80,7 @@ label-indicator-background = ${colors.cyan}
 
 [module/wlan]
 type = internal/network
-interface = wlp2s0
+interface = wls3
 interval = 3.0
 
 format-connected = <ramp-signal> <label-connected>
@@ -145,7 +145,7 @@ label-muted-foreground = ${colors.background}
 bar-volume-width = 10
 bar-volume-foreground = ${colors.background}
 bar-volume-background = ${colors.dark-green}
-bar-volume-gradient = false
+bar-volume-gradient = false
 
 bar-volume-indicator = 
 bar-volume-indicator-foreground = ${colors.background-alt}

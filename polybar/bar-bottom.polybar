@@ -23,7 +23,7 @@ foreground = ${colors.yellow}
 
 modules-left = i3
 modules-center = 
-modules-right =  filesystem memory cpu temperature
+modules-right =  filesystem memory cpu temperature battery
 
 #### Modules ####
 [module/i3]
@@ -87,7 +87,7 @@ interval = 2
 format-prefix = "%{T3}%{T-}  "
 format-underline = ${colors.cyan}
 label = %percentage:2%% %{T3}%{T-}
-format-background = ${colors.dark-red}
+format-background = ${colors.blue}
 format-foreground = ${colors.background}
 
 [module/memory]
