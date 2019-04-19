@@ -1,20 +1,18 @@
 - Font
 - NetworkManager
 - Bluetooth
-- PulseAudio
 - Backup of Old config files
 - Remove unnecessary steps
 - fix python install
-- add uninstall script
-- change README
+- add uninstall scripts
 - change Blogpost
 - Fix VSCode theme
 - VSCode Extension saver with watchexec
 - theme from startup
-- xclip
 - st
-- feh
 - power menu prompt
 - wifi selector
 - output selector
 - merge pacman and yay
+- Continous Integration
+- Releases

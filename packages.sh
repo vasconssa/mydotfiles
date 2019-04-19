@@ -12,6 +12,7 @@ export PKG=(
   neofetch
   playerctl
   pulseaudio
+  pulseaudio-alsa
   pulseaudio-bluetooth
   pulsemixer
   ranger
