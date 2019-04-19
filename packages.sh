@@ -12,6 +12,8 @@ export PKG=(
   libreoffice-still
   lxappearance
   neofetch
+  nerd-fonts-fira-code
+  networkmanager
   playerctl
   pulseaudio
   pulseaudio-alsa
