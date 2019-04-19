@@ -33,6 +33,7 @@ export PKG=(
   neovim
   polybar
   screenkey
+  compton
   spotify
   watchexec
 )
