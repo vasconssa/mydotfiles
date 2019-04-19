@@ -16,7 +16,5 @@ code --install-extension deerawan.vscode-dash
 code --install-extension njpwerner.autodocstring
 code --install-extension neuron.neuron-ipe
 
-rm -rf $HOME/.config/Code\ -\ OSS/User/settings.json
-ln -s $HOME/.dotfiles/vscode/settings.json $HOME/.config/Code\ -\ OSS/User/settings.json
-rm -rf $HOME/.config/Code\ -\ OSS/User/keybindings.json
-ln -s $HOME/.dotfiles/vscode/settings.json $HOME/.config/Code\ -\ OSS/User/keybindings.json
+ln -sf $HOME/.dotfiles/vscode/settings.json $HOME/.config/Code\ -\ OSS/User/settings.json
+ln -sf $HOME/.dotfiles/vscode/keybindings.json $HOME/.config/Code\ -\ OSS/User/keybindings.json
