@@ -1,7 +1,6 @@
 - Font
 - NetworkManager
 - Backup of Old config files
-- Remove unnecessary steps
 - fix python install
 - add uninstall scripts
 - change Blogpost
@@ -15,3 +14,4 @@
 - merge pacman and yay
 - Continous Integration
 - Releases
+- Change yay to _install from helpers.sh
