@@ -1,62 +1,30 @@
-[semaphoreci]: https://semaphoreci.com/nelsonmestevao/dotfiles
-[releases]: https://github.com/nelsonmestevao/dotfiles/releases/latest
+# Peers Dotfiles
+## What's this
+These are my dotfiles. I have started a small series about dotfiles and how to create them over on my website http://peerlator.com. My dotfiles could act as a boilerplate, just like [these](https://github.com/nelsonmestevao/dotfiles) did for mine, or if you like my configurations, you can simply install these on your system. However I would definetely recommend, that you **read** my configuration. First of all this acts as learning material, secondly you would want to know what is on your system and third, you should be able to modify the configuration of your system. To make everything a little easier, I would recommend to you, to visit my [blog](http://peerlator.com) and read the series about dotfiles.
 
-<h1 align="center">
-  <img src="https://user-images.githubusercontent.com/19409687/54166758-980b4200-445e-11e9-8e81-f0cd7ba70fb5.png" alt="dotfiles" width="750px">
-</h1>
+Documentation can be found in the KEYBINDINGS.md file. However this is only for the i3wm.
+## Installation
+Just like the dotfiles I forked, my dotfiles follow a very modular design. If you don't want a part of my dotfiles simply delete the folder
 
-[![Build Status](https://semaphoreci.com/api/v1/nelsonmestevao/dotfiles/branches/master/badge.svg)][semaphoreci]
-[![Latest Release](https://img.shields.io/github/release-pre/nelsonmestevao/dotfiles.svg?style=flat-square)][releases]
-
-I really like to configure my system in every possible way. This repository
-holds how I do it. If you are just starting out you could use mine (_I don't
-care or mind_) but for your own sake **read them**. You will not get the most
-out of it without.
-
-Start by reading my neovim configuration. It follows a literate configuration
-where it's documentation is the configuration files it selves. I write them
-using markdown and neovim will interpret only the code blocks.
-
-<div align="center">
-  <img alt="screenshot" src="screenshot.png" width="85%"/>
-</div>
-
-
-## Install
-
-I follow a very modular approach. If you don't want something you can just
-remove it's folder. Imagine you don't want Neovim. You can just delete `nvim`
-folder. It's that simple.
-
-
-Start by cloning my `dotfiles` into `~/.dotfiles`. You should do the same with
-my `spells` repository. Some scripts needed are there.
-
-```shell
-git clone https://github.com/nelsonmestevao/dotfiles ~/.dotfiles
-git clone https://github.com/nelsonmestevao/spells   ~/.spells
+If you want to customize the dotfiles and back them up to github I would recommend, that you simply fork this repository and then clone the reposetory to `$HOME/.dotfiles`. If you do not wat to backup or don't want to modify you can simply run 
+```bash
+git clone https://github.com/peerlator/dotfiles-new.git ~/.dotfiles
 ```
 
-Depending on your Linux distribution you should change the `distro.sh`
-accordingly.
-
-```shell
+Now, that you have a copy of the dotfiles on your computer, run the following
+```bash
 cd ~/.dotfiles
 make install
 ```
-
 ## Uninstall
-
-```shell
 cd ~/.dotfiles
 make uninstall
 cd ~
 rm -rf ~/.dotfiles
-rm -rf ~/.spells
-```
+## Credits
+- Original https://github.com/nelsonmestevao/dotfiles
 
 ## Disclaimer
-
 As you probably know, you shouldn't just run my Makefile without reading it
 first. And if you read it, you will understand that it calls other scripts like
 `install.sh` which depend on `helpers.sh`. Read those, it's the only way that
