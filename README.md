@@ -16,11 +16,6 @@ Now, that you have a copy of the dotfiles on your computer, run the following
 cd ~/.dotfiles
 make install
 ```
-## Uninstall
-cd ~/.dotfiles
-make uninstall
-cd ~
-rm -rf ~/.dotfiles
 ## Credits
 - Original https://github.com/nelsonmestevao/dotfiles
 
