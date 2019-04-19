@@ -1,5 +1,6 @@
-# better lockscreen
+# betterlockscreen
 cp betterlockscreen@.service /etc/systemd/system/
-
-# enable systemd service
 systemctl enable betterlockscreen@$USER
+
+# enable bluez
+sudo systemctl enable bluetooth.service

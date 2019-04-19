@@ -2,6 +2,8 @@
 
 export PKG=(
   bat
+  bluez
+  bluez-utils
   curl
   diff-so-fancy
   dunst
