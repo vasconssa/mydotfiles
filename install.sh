@@ -1,7 +1,6 @@
 #!/bin/bash
 
-sudo chmod +x $HOME/.dotfiles/*.sh
-sudo chmod +x $HOME/.dotfiles/**/*.sh
+find $HOME/.dotfiles/ -exec chmod +x {} \;
 
 . distro.sh
 . packages.sh

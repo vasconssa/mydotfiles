@@ -6,8 +6,8 @@
 - theme from startup
 - power menu prompt
 - wifi selector
-- output selector
-- merge pacman and yay
+- fix "c" alias
+- add code shortut to ranger
 - Continous Integration
 - Releases
 - Change yay to _install from helpers.sh

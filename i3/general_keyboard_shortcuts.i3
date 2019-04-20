@@ -43,6 +43,10 @@ floating_modifier $mod
 bindsym $mod+F2             exec playerctl play-pause
 bindsym $mod+F1             exec playerctl previous
 bindsym $mod+F3             exec playerctl next
+bindsym XF86AudioNext       exec playerctl next
+bindsym XF86AudioPrev       exec playerctl previous
+bindsym XF86AudioPlay       exec playerctl play-pause
+bindsym XF86AudioStop       exec playerctl stop
 
 # Gaps
 bindsym $mod+Mod1+plus      gaps inner current plus 5
@@ -55,5 +59,8 @@ bindsym $mod+shift+plus     gaps inner current set 15; gaps outer current set 15
 bindsym $mod+shift+minus    gaps inner current set 0; gaps outer current set 0
 
 # Volume
-bindsym $mod+F9             exec pulsemixer --change-volume -5
-bindsym $mod+F10            exec pulsemixer --change-volume +5
+bindsym $mod+F9                 exec pulsemixer --change-volume -5
+bindsym $mod+F10                exec pulsemixer --change-volume +5
+bindsym XF86AudioRaiseVolume    exec pulsemixer --change-volume +5
+bindsym XF86AudioLowerVolume    exec pulsemixer --change-volume -5
+bindsym XF86AudioMute           exec pulsemixer --mute
