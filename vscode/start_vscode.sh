@@ -1,1 +1,1 @@
-code --extensions-dir=$HOME/.vscode-oss/extensions
+code $1 --extensions-dir=$HOME/.vscode-oss/extensions
