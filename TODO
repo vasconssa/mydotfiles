@@ -3,10 +3,11 @@
 - add uninstall scripts
 - change Blogpost
 - VSCode Extension saver with watchexec
-- theme from startup
 - power menu prompt
 - wifi selector
 - add code shortut to ranger
 - Continous Integration
 - Releases
 - Change yay to _install from helpers.sh
+- Create xinitrc
+    - wal -R
