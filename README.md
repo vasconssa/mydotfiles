@@ -6,11 +6,11 @@ Documentation can be found in the KEYBINDINGS.md file. However this is only for 
 ## Installation
 Just like the dotfiles I forked, my dotfiles follow a very modular design. If you don't want a part of my dotfiles simply delete the folder
 
-If you want to customize the dotfiles and back them up to github I would recommend, that you simply fork this repository and then clone the reposetory to `$HOME/.dotfiles`. If you do not wat to backup or don't want to modify you can simply run 
+If you want to customize the dotfiles and back them up to github I would recommend, that you simply fork this repository and then clone the repository to `$HOME/.dotfiles`. If you do not wat to backup or don't want to modify you can simply run 
 ```bash
 git clone https://github.com/peerlator/dotfiles-new.git ~/.dotfiles
 ```
-
+> Note: To continue you will have to install yay
 Now, that you have a copy of the dotfiles on your computer, run the following
 ```bash
 cd ~/.dotfiles
