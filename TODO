@@ -2,7 +2,7 @@
 - fix python install
 - add uninstall scripts
 - change Blogpost
-- VSCode Extension saver with watchexec
+- VSCode Extension saver
 - power menu prompt
 - wifi selector
 - add code shortut to ranger
@@ -11,3 +11,4 @@
 - Change yay to _install from helpers.sh
 - Create xinitrc
     - wal -R
+- Mut (Mutt wizard)

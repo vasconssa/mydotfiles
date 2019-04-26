@@ -1,7 +1,6 @@
 #!/bin/bash
 
-export PKGMN=yay # Package Manager
-export PKGOPT=(--needed --noconfirm)
-export PKGU=-Syu # Updating Options
-export PKGI=-Sy  # Installation Options
-export PKGR=-Rns # Remove Options
+export PKGMN=yay # The packagemanager to use
+export PKGOPT=(--needed --no-confirm) # The options passed when installing packages
+export PKGU=(-Syu) # Updating options
+export PKGI=(-S) # Installation options

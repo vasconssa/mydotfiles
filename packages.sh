@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export PKG=(
+export PKGS=(
   bat
   bluez
   bluez-utils

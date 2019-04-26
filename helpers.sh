@@ -1,37 +1,36 @@
 #!/bin/bash
+blue=$(tput setaf 4)
+green=$(tput setaf 2)
+red=$(tput setaf 1)
+yellow=$(tput setaf 3)
+normal=$(tput sgr0)
 
 function echo_error() {
-  printf '\n\033[31mERROR:\033[0m %s\n' "$1"
+  printf "[${red}!!${normal}] $1 \n"
 }
 
 function echo_warning() {
-  printf '\n\033[33mWARNING:\033[0m %s\n' "$1"
+  printf "[${yellow}/\${normal}] $1 \n"
 }
 
-function echo_done() {
-  printf '\n\033[32mDONE:\033[0m %s\n' "$1"
+function echo_success() {
+  printf "[${green}OK${normal}] $1 \n"
 }
 
 function echo_info() {
-  printf '\n\033[36m%s\033[0m\n' "$1"
-}
-
-function _update() {
-  if [[ $1 != "system" ]]; then
-    echo_info "Updating system packages..."
-    "$PKGMN" "$PKGU" "${PKGOPT[@]}"
-  else
-    echo_info "Updating ${1}..."
-    "$PKGMN" "$PKGI" "$1"
-  fi
+  printf "[${blue}..${normal}] $1 \n"
 }
 
 function _install() {
-  for pkg in "${PKG[@]}"; do
-    echo_info "Installing ${pkg}..."
-    "$PKGMN" "$PKGI" "$pkg" "${PKGOPT[@]}"
-    echo_done "${pkg} installed!"
-  done
+    echo_info "Installing $1..."
+    "$PKGMN" "$PKGI" "$1" "${PKGOPT[@]}"
+    echo_success "Installed $1"
+}
+
+function _update() {
+    echo_info "Updating $1"
+    "$PKGMN" "$PKGU" "$1" "${PKGOPT[@]}"
+    echo_success "Updated $1"
 }
 
 function _run_install_files() {
