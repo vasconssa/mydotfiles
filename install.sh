@@ -15,6 +15,5 @@ _install $PKGS
 echo_info "Running Install files"
 _run_install_files
 
-
-. special_installs # run special installation steps
+. special_installs.sh # run special installation steps
 
