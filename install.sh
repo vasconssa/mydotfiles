@@ -10,7 +10,7 @@ echo_info "Updating system"
 _update
 
 echo_info "Installing packages..."
-_install $PKGS
+_install "${PKGS[@]}"
 
 echo_info "Running Install files"
 _run_install_files

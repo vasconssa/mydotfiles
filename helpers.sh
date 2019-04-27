@@ -22,10 +22,11 @@ function echo_info() {
 }
 
 function _install() {
-    for PKG in "$(1[@])"; do
-        echo_info "Installing $1..."
-        "$PKGMN" "$PKGI" "$1" "${PKGOPT[@]}"
-        echo_success "Installed $1"
+    pkgs=("$@")
+    for PKG in "$(pkgs[@])"; do
+        echo_info "Installing $PKG..."
+        "$PKGMN" "$PKGI" "$PKG" "${PKGOPT[@]}"
+        echo_success "Installed $PKG"
     done
 }
 

@@ -1,6 +1,7 @@
 #!/bin/bash
 
-export PKGS=(bat
+export PKGS=(
+    bat
     bluez
     bluez-utils
     curl
