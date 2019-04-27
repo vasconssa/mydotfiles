@@ -22,7 +22,7 @@ function echo_info() {
 }
 
 function _install() {
-    for PKG "$(1[@])"; do
+    for PKG in "$(1[@])"; do
         echo_info "Installing $1..."
         "$PKGMN" "$PKGI" "$1" "${PKGOPT[@]}"
         echo_success "Installed $1"
