@@ -9,7 +9,7 @@ export PKGS=(
     dunst
     feh
     htop
-    libreoffice-still
+    libreoffice-fresh
     lxappearance
     neofetch
     nerd-fonts-fira-code
@@ -30,7 +30,6 @@ export PKGS=(
     betterlockscreen
     franz
     chromium
-
     neovim
     polybar
     screenkey
