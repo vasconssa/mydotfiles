@@ -9,6 +9,7 @@ export PKGS=(
     dunst
     feh
     htop
+    lsd
     libreoffice-fresh
     lxappearance
     neofetch
@@ -36,7 +37,7 @@ export PKGS=(
     compton
     spotify
     xorg
-    xorg-init
+    xorg-xinit
     watchexec
 )
 
