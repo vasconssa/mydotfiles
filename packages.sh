@@ -35,6 +35,8 @@ export PKGS=(
     screenkey
     compton
     spotify
+    xorg
+    xorg-init
     watchexec
 )
 
