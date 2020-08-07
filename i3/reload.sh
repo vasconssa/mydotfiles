@@ -5,4 +5,4 @@ echo > ~/.config/i3/config &&
 for f in $HOME/.dotfiles/**/*.i3; do (cat "${f}"; echo) >> ~/.config/i3/config; done &&
 echo > ~/.config/polybar/config &&
 for f in $HOME/.dotfiles/**/*.polybar; do (cat "${f}"; echo) >> ~/.config/polybar/config; done &&
-i3-msg restart
+DISPLAY=:0 i3-msg restart

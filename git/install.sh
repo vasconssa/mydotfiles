@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # shellcheck source=distro.sh
-. ../distro.sh
+ .distro.sh
 # shellcheck source=helpers.sh
-. ../helpers.sh
+ .helpers.sh
 
 echo_info "Installing Git LFS..."
 _install git-lfs

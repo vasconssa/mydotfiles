@@ -8,12 +8,10 @@ then
     if [[ -n $selected ]]
     then
         wal --theme $HOME/.dotfiles/wal/colorschemes/dark/$selected
-        cat $HOME/.cache/wal/colors.conky $HOME/.dotfiles/conky/conky-text > $HOME/.dotfiles/conky/conkyrc
         killall dunst && dunst -mon 1
     fi
 elif [ $light_or_dark = "Wallpaper" ] 
 then
     wal -i $HOME/.dotfiles/wallpapers/current.png
-    cat $HOME/.cache/wal/colors.conky $HOME/.dotfiles/conky/conky-text > $HOME/.dotfiles/conky/conkyrc
     killall dunst && dunst -mon 1
 fi

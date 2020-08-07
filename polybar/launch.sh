@@ -1,10 +1,11 @@
 killall polybar
-for m in $(polybar --list-monitors | cut -d":" -f1);
-do
-	MONITOR=$m polybar --reload top &
-done
+
+# Wait until the processes have been shut down
+while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
 for m in $(polybar --list-monitors | cut -d":" -f1);
 do
+	MONITOR=$m polybar --reload top &
 	MONITOR=$m polybar --reload bottom &
 done
+

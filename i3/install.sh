@@ -1,7 +1,7 @@
 # Install i3
 sudo pacman --noconfirm -S i3-gaps
 
-mkdir .config/i3/
+mkdir -p .config/i3/
 # Generate Config
 mkdir $HOME/.config/i3
 mkdir $HOME/.config/polybar

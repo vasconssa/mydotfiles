@@ -30,7 +30,7 @@ function _install() {
 
 function _update() {
     echo_info "Updating $1"
-    "$PKGMN" "$PKGU" "$1" "${PKGOPT[@]}"
+    "$PKGMN" "$PKGU"  "${PKGOPT[@]}"
     echo_success "Updated $1"
 }
 

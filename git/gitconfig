@@ -1,12 +1,12 @@
 [user]
-  name = Peer Rheinboldt
-  email = peer.rheinboldt@gmail.com
+  name = Raphael de Vasconcelos Nascimento
+  email = rapharvn@gmail.com
 [github]
-  user = peerlator
+  user = vasconssa
 [web]
-  browser = google-chrome-stable
+  browser = firefox
 [core]
-  editor = nvim
+  editor = vim
   excludesfile = ~/.dotfiles/git/gitignore_global
   attributesfile = ~/.dotfiles/git/gitattributes
   pager = diff-so-fancy | less --tabs=4 -RFX
@@ -80,11 +80,11 @@
   textconv = catppt
 [diff-so-fancy]
   first-run = false
-[url "git@github.com:peerlator/"]
+[url "git@github.com:vasconssa/"]
   insteadOf = gh:
 [url "git@github.com:"]
   insteadOf = ghx:
-[url "git@gitlab.com:peerlator/"]
+[url "git@gitlab.com:vasconssa/"]
   insteadOf = gl:
 [url "git@gitlab.com:"]
   insteadOf = glx:

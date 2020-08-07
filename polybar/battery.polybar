@@ -3,8 +3,7 @@
 type = internal/battery
 
 ; This is useful in case the battery never reports 100% charge
-full-at = 9git config --global credential.helper store
-6
+full-at = 101
 
 ; Use the following command to list batteries and adapters:
 ; $ ls -1 /sys/class/power_supply/
@@ -20,7 +19,7 @@ adapter = AC
 ; Disable polling by setting the interval to 0.
 ;
 ; Default: 5
-poll-interval = 5
+poll-interval = 2
 
 ; Available tags:
 ;   <label-charging> (default)
@@ -55,3 +54,22 @@ animation-charging-1 = 
 animation-charging-2 = 
 animation-charging-3 = 
 animation-charging-4 = 
+
+; Framerate in milliseconds
+animation-charging-framerate = 750
+
+; Only applies if <animation-discharging> is used
+;;animation-discharging-0 = 
+;;animation-discharging-1 = 
+;;animation-discharging-2 = 
+;;animation-discharging-3 = 
+;;animation-discharging-4 = 
+;;animation-discharging-5 = 
+;;animation-discharging-6 = 
+;;animation-discharging-7 = 
+;;animation-discharging-8 = 
+
+; Framerate in milliseconds
+;animation-discharging-framerate = 500
+
+;
