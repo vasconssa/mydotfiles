@@ -132,7 +132,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'vim-pandoc/vim-pandoc-syntax'
     Plug 'vimwiki/vimwiki'
     ""Edit latex 
-    "call minpac#add('lervag/vimtex'
+    Plug 'lervag/vimtex'
     ""Better C++ Highlight
     Plug 'octol/vim-cpp-enhanced-highlight'
 

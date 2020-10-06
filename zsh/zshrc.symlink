@@ -12,3 +12,4 @@ fi
 source $HOME/.dotfiles/zsh/sourcing.zsh
 
 neofetch
+export PATH="${PATH}:/home/vasconssa/.gem/ruby/2.7.0/bin"
